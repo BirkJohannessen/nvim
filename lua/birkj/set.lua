@@ -10,3 +10,8 @@ vim.opt.incsearch = true --/find on /f
 vim.opt.smartindent = true
 
 vim.opt.wrap = false
+
+vim.opt.hlsearch = false
+
+vim.opt.scrolloff = 8
+vim.opt.signcolumn = "yes"
