@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # nvim
 Denne prosjektet er en personlig konfigurasjon for NeoVim, en kraftig tekstredigerer og IDE som er kompatibel med Vim. \
 Dette er konfigurasjon for å tilpasse nvim til mine preferanser og behov, og den inkluderer en rekke plugins og innstillinger som gjør meg effektiv.\
