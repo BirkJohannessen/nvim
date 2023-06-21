@@ -1,5 +1,7 @@
 #see https://github.com/neovim/neovim/wiki/Building-Neovim
 #and https://github.com/neovim/neovim/wiki/Building-Neovim#build-prerequisites
+#clipboard functio
+sudo apt install xclip -y
 #Ubuntu depenencies
 sudo apt-get install ninja-build gettext cmake unzip curl -y
 pip install cmake
