@@ -8,3 +8,8 @@ pip install cmake
 cd $HOME/Public && git clone https://github.com/neovim/neovim
 cd $HOME/Public/neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
 cd $HOME/Public/neovim/build && sudo cpack -G DEB && sudo dpkg -i nvim-linux64.deb
+
+
+#telescope dependencies
+sudo apt install ripgrep -y
+sudo apt install fd-find
