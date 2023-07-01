@@ -55,6 +55,8 @@ local servers = {
   -- rust_analyzer = {},
   tsserver = {},
 
+  csharp_ls = {},
+
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },

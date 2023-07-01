@@ -5,5 +5,6 @@ require("birkj.treesitter")
 require("birkj.lsp")
 require("birkj.cmp")
 require("birkj.diagnostic")
+require("birkj.harpoon")
 -- require("birkj.packer")
 
