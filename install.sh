@@ -13,3 +13,8 @@ cd $HOME/Public/neovim/build && sudo cpack -G DEB && sudo dpkg -i nvim-linux64.d
 #telescope dependencies
 sudo apt install ripgrep -y
 sudo apt install fd-find
+
+#important basic dependencies
+sudo apt install npm -y
+sudo apt install python3 -y
+sudo apt install python3-pip -y
