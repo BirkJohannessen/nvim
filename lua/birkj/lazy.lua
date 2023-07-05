@@ -98,7 +98,17 @@ require('lazy').setup({
       vim.cmd.colorscheme 'rose-pine'
     end,
   },
-
+  {
+    'folke/tokyonight.nvim',
+    priority = 1000,
+    opts = {
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      }
+    },
+  },
   {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
@@ -151,6 +161,13 @@ require('lazy').setup({
     },
     build = ':TSUpdate',
   },
+  {
+     'ThePrimeagen/harpoon'
+  },
+  {
+    'nvim-lua/plenary.nvim'
+  }
+
 
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
