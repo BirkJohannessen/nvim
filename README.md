@@ -1,10 +1,10 @@
 # nvim
-Denne prosjektet er en personlig konfigurasjon for NeoVim, en kraftig tekstredigerer og IDE som er kompatibel med Vim. \
-Dette er konfigurasjon for å tilpasse nvim til mine preferanser og behov, og den inkluderer en rekke plugins og innstillinger som gjør meg effektiv.\
-Prosjektet er laget så jeg kan enkelt klone prosjektet ned så det er synkront med alle linux systemene mine.
+Dette repoet er en personlig konfigurasjon for NeoVim, en kraftig tekstredigerer som er kompatibel med Vim. \
+konfigurasjonen tilpasser nvim til mine preferanser og behov, og den inkluderer en rekke plugins og innstillinger som gjør meg effektiv.\
+Prosjektet er laget så jeg kan enkelt klone prosjektet ned så det er synkront med alle linux maskinene mine.
 
-## Neo vim?
-**Laget av chat gippity** \
+## Neovim?
+**Laget av chat gippity**
 
 - **Kraftig og fleksibel:** NeoVim er en videreutvikling av Vim, en av de mest populære tekstredigererne blant utviklere. Med denne konfigurasjonen får du tilgang til alle Vim-funksjonene, samt flere forbedringer og moderne funksjoner.
 
@@ -14,15 +14,4 @@ Prosjektet er laget så jeg kan enkelt klone prosjektet ned så det er synkront 
 
 
 ## Install script
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\ \
-~/.local/share/nvim/site/pack/packer/start/packer.nvim
- 
-https://github.com/wbthomason/packer.nvim
-:Packersync
-
-
-
-sudo apt-get install software-properties-common\
-sudo add-apt-repository ppa:neovim-ppa/stable\
-sudo apt-get update\
-sudo apt-get install neovim\
+see install.sh
