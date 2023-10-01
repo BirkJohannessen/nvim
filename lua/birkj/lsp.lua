@@ -53,9 +53,10 @@ local servers = {
   -- gopls = {},
   pyright = {},
   -- rust_analyzer = {},
-  tsserver = {},
-
-  csharp_ls = {},
+  -- tsserver = {},
+  
+  eslint = {},
+  -- csharp_ls = {},
 
   lua_ls = {
     Lua = {
