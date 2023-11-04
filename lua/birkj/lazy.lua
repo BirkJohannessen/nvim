@@ -100,13 +100,13 @@ require('lazy').setup({
   },
   {
     'folke/tokyonight.nvim',
-    priority = 1000,
+    priority = 2,
     opts = {
-      transparent = true,
-      styles = {
-        sidebars = "transparent",
-        floats = "transparent",
-      }
+      -- transparent = true,
+      -- styles = {
+        -- sidebars = "transparent",
+        -- floats = "transparent",
+      -- }
     },
   },
   {
@@ -122,16 +122,13 @@ require('lazy').setup({
       },
     },
   },
-
-  {
-    -- Add indentation guides even on blank lines
-    'lukas-reineke/indent-blankline.nvim',
-    -- Enable `lukas-reineke/indent-blankline.nvim`
-    -- See `:help indent_blankline.txt`
-    opts = {
-      char = '┊',
-      show_trailing_blankline_indent = false,
-    },
+  { 
+	  'lukas-reineke/indent-blankline.nvim', main = "ibl", 
+		-- See `:help indent_blankline.txt`
+	  opts = {
+		  --char = '┊',
+		  --show_trailing_blankline_indent = false,
+	  }
   },
 
   -- "gc" to comment visual regions/lines

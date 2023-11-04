@@ -18,3 +18,6 @@ sudo apt install fd-find
 sudo apt install npm -y
 sudo apt install python3 -y
 sudo apt install python3-pip -y
+
+#treesitter
+sudo npm install -g tree-sitter
