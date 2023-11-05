@@ -163,6 +163,10 @@ require('lazy').setup({
   },
   {
     'nvim-lua/plenary.nvim'
+  },
+  {
+    -- java plugin
+    'mfussenegger/nvim-jdtls'
   }
 
 

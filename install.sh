@@ -21,3 +21,7 @@ sudo apt install python3-pip -y
 
 #treesitter
 sudo npm install -g tree-sitter
+
+#java
+cd $HOME/Public && git clone git@github.com:eclipse-jdtls/eclipse.jdt.ls.git
+cd $HOME/Public && ./mvnw clean verify -DskipTests=true
