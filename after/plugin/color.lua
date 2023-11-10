@@ -1,7 +1,3 @@
-require('rose-pine').setup({
-    -- disable_background = true
-})
-
 function Michy(color)
 	color = color or "tokyonight"
 	vim.cmd.colorscheme(color)
@@ -10,4 +6,10 @@ function Michy(color)
 	-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	--vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
-Michy()
+
+function intellij()
+    vim.cmd 'colorscheme darcula-solid'
+    vim.cmd 'set termguicolors'
+end
+
+intellij()

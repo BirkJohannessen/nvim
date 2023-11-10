@@ -87,7 +87,7 @@ require('lazy').setup({
       end,
     },
   },
-
+--[[
   {
     -- Theme inspired by Atom
     'rose-pine/neovim',
@@ -108,6 +108,13 @@ require('lazy').setup({
         -- floats = "transparent",
       -- }
     },
+  },
+  ]]--
+  {
+    'briones-gabriel/darcula-solid.nvim'
+  },
+  {
+    'rktjmp/lush.nvim'
   },
   {
     -- Set lualine as statusline
