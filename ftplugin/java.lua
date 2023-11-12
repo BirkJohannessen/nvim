@@ -3,20 +3,20 @@
 -- 'nvim/ftplugin/java.lua'.
 -- 'nvim/lang-servers/intellij-java-google-style.xml'
 local function exists(file)
-   local ok, err, code = os.rename(file, file)
-   if not ok then
-      if code == 13 then
-         -- Permission denied, but it exists
-         return true
-      end
-   end
-   return ok, err
+  local ok, err, code = os.rename(file, file)
+  if not ok then
+    if code == 13 then
+      -- Permission denied, but it exists
+      return true
+    end
+  end
+  return ok, err
 end
 
 --- Check if a directory exists in this path
 local function isdir(path)
-   -- "/" works on both Unix and Windows
-   return exists(path.."/")
+  -- "/" works on both Unix and Windows
+  return exists(path.."/")
 end
 
 local jdtls_ok, jdtls = pcall(require, "jdtls")
@@ -34,7 +34,7 @@ local path_to_plugins = jdtls_path .. "plugins/"
 local path_to_jar = path_to_plugins .. "org.eclipse.equinox.launcher_1.6.500.v20230717-2134.jar"
 
 
--- local lombok_path = jdtls_path .. "lombok.jar"
+local lombok_path = jdtls_path .. "lombok.jar"
 
 local root_markers = { ".git", "mvnw", "gradlew", "pom.xml", "build.gradle" }
 local root_dir = require("jdtls.setup").find_root(root_markers)
@@ -107,11 +107,11 @@ local config = {
         includeDecompiledSources = true,
       },
       --format = {
-        --enabled = true,
-        --settings = {
-         -- url = vim.fn.stdpath "config" .. "/lang-servers/intellij-java-google-style.xml",
-          --profile = "GoogleStyle",
-        --},
+      --enabled = true,
+      --settings = {
+      -- url = vim.fn.stdpath "config" .. "/lang-servers/intellij-java-google-style.xml",
+      --profile = "GoogleStyle",
+      --},
       --},
 
     },
@@ -124,7 +124,6 @@ local config = {
         "org.junit.jupiter.api.Assertions.*",
         "java.util.Objects.requireNonNull",
         "java.util.Objects.requireNonNullElse",
-        "org.mockito.Mockito.*",
       },
       importOrder = {
         "java",
@@ -156,19 +155,25 @@ local config = {
   },
 }
 
-config['on_attach'] = function(client, bufnr)
-  require'keymaps'.map_java_keys(bufnr);
-  require "lsp_signature".on_attach({
-    bind = true, -- This is mandatory, otherwise border config won't get registered.
-    floating_window_above_cur_line = false,
-    padding = '',
-    handler_opts = {
-      border = "rounded"
-    }
-  }, bufnr)
+config["on_attach"] = function(client, bufnr)
+  --local _, _ = pcall(vim.lsp.codelens.refresh)
+  --require("jdtls").setup_dap({ hotcodereplace = "auto" })
+  require("birkj.lsp").on_attach(client, bufnr)
+  --local status_ok, jdtls_dap = pcall(require, "jdtls.dap")
+  if status_ok then
+    --jdtls_dap.setup_dap_main_class_configs()
+  end
 end
-
 -- This starts a new client & server,
 -- or attaches to an existing client & server depending on the `root_dir`.
+
+require("birkj.color").dracula()
+
 require('jdtls').start_or_attach(config)
 
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(args)
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+    client.server_capabilities.semanticTokensProvider = nil
+  end,
+});

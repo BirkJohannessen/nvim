@@ -49,7 +49,6 @@ require('lazy').setup({
       'folke/neodev.nvim',
     },
   },
-
   {
     -- Autocompletion
     'hrsh7th/nvim-cmp',
@@ -65,9 +64,11 @@ require('lazy').setup({
       'rafamadriz/friendly-snippets',
     },
   },
-
+  {
   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim', opts = {} },
+    'folke/which-key.nvim',
+    opts = {}
+  },
   {
     -- Adds git releated signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -87,31 +88,14 @@ require('lazy').setup({
       end,
     },
   },
---[[
   {
-    -- Theme inspired by Atom
     'rose-pine/neovim',
-    -- 'navarasu/onedark.nvim',
-    priority = 1000,
-    config = function()
-      -- vim.cmd.colorscheme 'onedark'
-      vim.cmd.colorscheme 'rose-pine'
-    end,
   },
   {
     'folke/tokyonight.nvim',
-    priority = 2,
-    opts = {
-      -- transparent = true,
-      -- styles = {
-        -- sidebars = "transparent",
-        -- floats = "transparent",
-      -- }
-    },
   },
-  ]]--
   {
-    'briones-gabriel/darcula-solid.nvim'
+    'briones-gabriel/darcula-solid.nvim',
   },
   {
     'rktjmp/lush.nvim'
@@ -129,13 +113,8 @@ require('lazy').setup({
       },
     },
   },
-  { 
-	  'lukas-reineke/indent-blankline.nvim', main = "ibl", 
-		-- See `:help indent_blankline.txt`
-	  opts = {
-		  --char = '┊',
-		  --show_trailing_blankline_indent = false,
-	  }
+  {
+    'lukas-reineke/indent-blankline.nvim', main = "ibl", 
   },
 
   -- "gc" to comment visual regions/lines
@@ -166,7 +145,7 @@ require('lazy').setup({
     build = ':TSUpdate',
   },
   {
-     'ThePrimeagen/harpoon'
+    'ThePrimeagen/harpoon'
   },
   {
     'nvim-lua/plenary.nvim'
