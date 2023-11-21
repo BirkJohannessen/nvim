@@ -1,2 +1,2 @@
-require("birkj.color").tokyoNight()
+require("birkj.color").rosePine()
 
